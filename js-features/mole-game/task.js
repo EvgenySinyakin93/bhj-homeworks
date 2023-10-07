@@ -2,8 +2,8 @@
   const getHole = index => document.getElementById(`hole${index}`); 
   const deadclick = document.getElementById("dead");
   const lostClick = document.getElementById("lost");
-  const countDead = parseInt(deadclick.textContent);
-  const countLost = parseInt(lostClick.textContent);
+  let countDead = parseInt(deadclick.textContent);
+  let countLost = parseInt(lostClick.textContent);
 
   function game(deadclick, lostClick){
   console.log(deadclick, lostClick);
@@ -20,7 +20,7 @@
 }
 
 for (let i = 1; i < 9; i++) {
-   getHole[i].onclick = function() {
+   getHole(i).onclick = function() {
     if (this.className.includes('hole hole_has-mole')) {
         countDead++;
         deadclick.textContent = countDead;
