@@ -16,6 +16,5 @@ document.querySelectorAll(".dropdown__item").forEach(item => {
       const value = this.textContent;
   
       dropdown.querySelector(".dropdown__value").innerText = value;
-      dropdown.querySelector(".dropdown__item").style.display = "flex";
-        });
+       });
   });
