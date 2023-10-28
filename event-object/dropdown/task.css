@@ -16,13 +16,11 @@
   display: inline-block;
   cursor: pointer;
   border-radius: 6px;
-  font-size: 14px;
 }
 
 .dropdown__value:after {
   content: '\21E9';
-  display: flex;
-  margin-left: 35px;
+  margin-left: 5px;
 }
 
 .dropdown__list {
@@ -39,7 +37,7 @@
 }
 
 .dropdown__link {
-  display: flex;
+  display: block;
   text-decoration: none;
   color: black;
   padding: 5px 10px;
@@ -57,9 +55,3 @@
   text-align: center;
 }
 
-#button {
-  display: block;
-  width: 100px;
-  height: 100px;
-  margin: auto;
-}
