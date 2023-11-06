@@ -1,6 +1,6 @@
-//сверни разверни 
+//сверни разверни
 
-const button = document.getElementById("button");
+const button = document.querySelector(".dropdown__value");
 const listItems = document.querySelectorAll(".dropdown__list");
 
 button.addEventListener("click", () => {
@@ -10,11 +10,11 @@ button.addEventListener("click", () => {
 });
 
 //замена пункта при выборе
-document.querySelectorAll(".dropdown__item").forEach(item => {
-    item.addEventListener("click", function() {
-      const dropdown = this.closest(".dropdown");
-      const value = this.textContent;
-  
-      dropdown.querySelector(".dropdown__value").innerText = value;
-       });
+document.querySelectorAll(".dropdown__item").forEach((item) => {
+  item.addEventListener("click", function () {
+    const dropdown = this.closest(".dropdown");
+    const value = this.textContent;
+
+    dropdown.querySelector(".dropdown__value").innerText = value;
   });
+});
