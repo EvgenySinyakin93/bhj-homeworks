@@ -12,9 +12,11 @@ button.addEventListener("click", () => {
 //замена пункта при выборе
 document.querySelectorAll(".dropdown__item").forEach((item) => {
   item.addEventListener("click", function () {
+    event.preventDefault();
     const dropdown = this.closest(".dropdown");
     const value = this.textContent;
 
-    dropdown.querySelector(".dropdown__value").innerText = value;
+    dropdown.querySelector(".dropdown__value").textContent = value;
+    return false;
   });
 });
