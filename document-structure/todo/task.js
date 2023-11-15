@@ -5,19 +5,21 @@ const todoAdd = document.getElementById("tasks__add");
 const todoRemove = document.querySelector('.task__remove');
 
 
-//Добавляем задачу через Enter
-todoInput.addEventListener('keydown', function (event) {
-  if (event.key === "Enter" && todoInput.value.trim() !== '') {
-    todoList.innerHTML += `
-        <div class="task">
-        <div class="task__title">
-          ${todoInput.value}
-        </div>
-        <a href="#" class="task__remove">&times;</a>
-      </div>
-      `;
-    todoInput.value = '';
+//Добавляем задачу через Добавить
+todoAdd.addEventListener('click', function(event) {
+  event.preventDefault();
+  if(todoInput.value.trim() === '') {
+      return;
   }
+  todoList.innerHTML += `
+      <div class="task">
+          <div class="task__title">
+              ${todoInput.value}
+          </div>
+          <a href="#" class="task__remove">&times;</a>
+      </div>
+  `;
+  todoInput.value = '';
 });
 
 //Удаление при нажатии на Х
