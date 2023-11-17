@@ -15,13 +15,15 @@ hasTooltip.forEach(hasTooltips => {
     tooltip.classList.add('tooltip');
     tooltip.textContent = hasTooltips.getAttribute('title');
     tooltip.classList.add('tooltip_active');
+    
+   
 
-    // //Закрытие подсказки при повторном клике
-    // const tooltipActive = hasTooltips.querySelectorAll('.tooltip_active');
-    // if(tooltipActive) {
-    //     tooltipActive.remove();
-    //     return;
-    // }
+    //Закрытие подсказки при повторном клике
+    const tooltipActive = hasTooltips.querySelectorAll('.tooltip_active');
+    if(tooltipActive) {
+        tooltipActive.remove();
+        return;
+    }
 
     // Запрет на открытие более 1-ой активной подсказки
     const tooltipMuch = document.querySelectorAll('.tooltip');

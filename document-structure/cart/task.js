@@ -8,7 +8,7 @@ const productControl = document.querySelectorAll('.product__quantity-controls');
 productControl.forEach(control => {
     const buttonAddValue = control.querySelector('.product__quantity-control_inc');
     const buttonRemoveValue = control.querySelector('.product__quantity-control_dec');
-    const productQuantityValue = control.querySelector('.product__quantity-value');
+    let productQuantityValue = control.querySelector('.product__quantity-value');
 
     buttonAddValue.addEventListener('click', () => {
         productQuantityValue.textContent = parseInt(productQuantityValue.textContent) + 1;
@@ -16,8 +16,8 @@ productControl.forEach(control => {
 
     buttonRemoveValue.addEventListener('click', () => {
         productQuantityValue.textContent = parseInt(productQuantityValue.textContent) - 1;
-        if (productCard < 1) {
-            productQuantityValue = 1;
+        if (productQuantityValue.textContent <= 1) {
+            productQuantityValue.textContent = 1;
         }
     });
 })
