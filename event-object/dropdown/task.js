@@ -13,10 +13,10 @@ button.addEventListener("click", () => {
 document.querySelectorAll(".dropdown__item").forEach((item) => {
   item.addEventListener("click", function () {
     event.preventDefault();
-    const dropdown = this.closest(".dropdown");
-    const value = this.textContent;
+    const dropdown = event.currentTarget.closest(".dropdown");
+    const value = event.currentTarget.textContent;
 
     dropdown.querySelector(".dropdown__value").textContent = value;
-    return false;
+    listItems[0].classList.toggle("dropdown__list_active");
   });
 });
