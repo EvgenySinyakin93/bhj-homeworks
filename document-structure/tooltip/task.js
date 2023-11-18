@@ -19,7 +19,7 @@ hasTooltip.forEach(hasTooltips => {
    
 
     //Закрытие подсказки при повторном клике
-    const tooltipActive = hasTooltips.querySelectorAll('.tooltip_active');
+    const tooltipActive = hasTooltips.querySelector('.tooltip_active');
     if(tooltipActive) {
         tooltipActive.remove();
         return;

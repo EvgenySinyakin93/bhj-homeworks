@@ -82,7 +82,15 @@ body {
   cursor: pointer;
 }
 
-.product__add:hover {
+.product__delete{
+  background: red;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product__add:hover, .product__delete:hover {
   opacity: 0.8;
 }
 
