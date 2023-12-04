@@ -2,7 +2,7 @@ const loader = document.getElementById("loader");
 const items = document.getElementById("items");
 
 //создаем запрос
-let xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 xhr.open(
   "GET",
   "https://students.netoservices.ru/nestjs-backend/slow-get-courses"
@@ -11,7 +11,7 @@ xhr.onload = function () {
   if ((xhr.readyState = xhr.DONE)) {
     if (xhr.status >= 400) {
       setTimeout(() => {
-        return alert("Ошибка загрузки данных" + this.response.status);
+        return console.log("Ошибка загрузки данных" + this.response.status);
       }, 1000);
     }
 
